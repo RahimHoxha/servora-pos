@@ -1,0 +1,59 @@
+@import "../../styles/page-shell.scss";
+
+.users-layout {
+  @include servora-page;
+
+  .title {
+    @include servora-page-title;
+  }
+
+  .scrollable-table {
+    @include servora-panel;
+    margin-top: 8px;
+    overflow-y: auto;
+    height: auto;
+    min-height: 0;
+    padding: 0;
+
+    .ant-table-wrapper {
+      padding: 8px 16px 16px;
+    }
+
+    .ant-table {
+      @media (max-width: 767px) {
+        font-size: 14px;
+        margin-top: 8px;
+      }
+
+      .ant-table-cell {
+        @media (max-width: 767px) {
+          padding: 8px;
+        }
+      }
+
+      .ant-tag {
+        @media (max-width: 767px) {
+          font-size: 12px;
+          padding: 2px 8px;
+        }
+      }
+    }
+  }
+
+  .ant-row {
+    @media (max-width: 499px) {
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+}
+
+.header-wrapper {
+  align-items: center;
+
+  @media (max-width: 499px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}

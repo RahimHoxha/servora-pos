@@ -1,0 +1,25 @@
+.servora-content-layout {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #eef2f6;
+  padding-bottom: 88px;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (min-width: 1025px) {
+  .servora-content-layout {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .servora-content-layout {
+    min-width: 0;
+  }
+}

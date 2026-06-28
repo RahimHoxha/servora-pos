@@ -1,0 +1,197 @@
+@import "../../styles/page-shell.scss";
+
+.settings-layout {
+  padding: 24px 28px 32px;
+  max-width: 1080px;
+  box-sizing: border-box;
+
+  @media (max-width: 767px) {
+    padding: 16px 16px 96px;
+    max-width: 100%;
+  }
+
+  .settings-header {
+    margin-bottom: 20px;
+  }
+
+  .title {
+    @include servora-page-title;
+    display: block;
+  }
+
+  .settings-form-panel {
+    @include servora-panel;
+    padding: 28px 32px 24px;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    @media (max-width: 767px) {
+      padding: 20px 16px;
+    }
+  }
+
+  .settings-section {
+    width: 100%;
+  }
+
+  .settings-section-title {
+    margin: 0 0 16px !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    color: #0f172a !important;
+  }
+
+  .settings-brand-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  .settings-brand-upload {
+    flex: 0 0 auto;
+
+    .ant-upload-wrapper.ant-upload-picture-card-wrapper {
+      width: auto;
+    }
+
+    .ant-upload.ant-upload-select {
+      width: 120px !important;
+      height: 120px !important;
+      margin: 0 !important;
+    }
+  }
+
+  .settings-logo-hint {
+    flex: 1;
+    max-width: 420px;
+    font-size: 0.925rem;
+    line-height: 1.6;
+    padding-top: 8px;
+  }
+
+  .settings-divider {
+    margin: 24px 0;
+  }
+
+  .settings-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+    padding-top: 8px;
+  }
+
+  .settings-section--footer {
+    padding-bottom: 4px;
+  }
+
+  .settings-subcard {
+    background: #f8fafc;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    border-radius: 16px;
+    padding: 20px 22px;
+    height: 100%;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .settings-language-select {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .ant-form-item {
+    margin-bottom: 18px;
+  }
+
+  .ant-form-item-label > label {
+    font-weight: 600;
+    color: #0f172a;
+    font-size: 14px;
+  }
+
+  .react-tel-input {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .react-tel-input .form-control {
+    width: 100% !important;
+    max-width: 100%;
+  }
+}
+
+.avatar-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  cursor: pointer;
+}
+
+.avatar-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.avatar-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.avatar-badge {
+  position: absolute;
+  right: -6px;
+  top: 8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: white;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  background-color: #dc2626;
+}
+
+.avatar-badge:hover {
+  filter: brightness(0.85);
+}
+
+.ruaj-btn {
+  min-width: 160px;
+}
+
+@media (max-width: 767px) {
+  .settings-actions {
+    justify-content: stretch;
+  }
+
+  .ruaj-btn {
+    width: 100%;
+  }
+
+  .settings-language-select {
+    max-width: 100%;
+  }
+}

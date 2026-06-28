@@ -1,0 +1,80 @@
+@import "../../styles/page-shell.scss";
+
+.stock-layout {
+  @include servora-page;
+
+  .title {
+    @include servora-page-title;
+  }
+
+  .scrollable-table {
+    @include servora-panel;
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 0;
+  }
+
+  .scrollable-table .ant-table-wrapper {
+    padding: 8px 16px 16px;
+  }
+}
+
+.stock-action-buttons-row {
+  .ant-btn {
+    min-width: 40px;
+    width: 48px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  @media (max-width: 611px) and (min-width: 530px) {
+    flex-direction: column !important;
+    gap: 8px !important;
+
+    .ant-btn {
+      min-width: 32px;
+      width: 36px;
+      height: 32px;
+      font-size: 15px;
+      margin-left: 0 !important;
+    }
+  }
+
+  @media (max-width: 529px) and (min-width: 501px) {
+    flex-direction: column !important;
+    gap: 8px !important;
+
+    .ant-btn {
+      min-width: 32px;
+      width: 36px;
+      height: 32px;
+      font-size: 15px;
+      margin-left: 0 !important;
+    }
+  }
+
+  @media (max-width: 500px) {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+
+    .ant-btn {
+      min-width: 32px;
+      width: 36px;
+      height: 32px;
+      font-size: 15px;
+      margin-left: 0 !important;
+    }
+  }
+}
+
+.ant-modal-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+
+  .ant-btn {
+    margin-left: 8px;
+  }
+}

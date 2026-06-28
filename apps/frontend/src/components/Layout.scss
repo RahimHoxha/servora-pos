@@ -1,0 +1,50 @@
+.servora-app-shell.ant-layout {
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.servora-app-shell > .ant-layout-content {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.desktop-sider {
+  flex: 0 0 268px;
+  max-width: 268px;
+  height: 100%;
+  overflow: hidden;
+  align-self: stretch;
+  background: #0f172a;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+
+  .servora-rail.ant-layout-sider {
+    height: 100% !important;
+    max-height: 100%;
+    overflow: hidden;
+  }
+}
+
+.servora-app-row.ant-layout {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.servora-content-layout {
+  @media (max-width: 1024px) {
+    padding-left: 0 !important;
+  }
+}

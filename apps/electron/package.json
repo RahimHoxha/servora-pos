@@ -1,0 +1,61 @@
+{
+  "version": "1.0.0",
+  "name": "servora-electron",
+  "description": "Servora POS Desktop Application",
+  "author": {
+    "name": "Servora"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "prebuild": "node prepare-dist.js",
+    "build": "cross-env CSC_IDENTITY_AUTO_DISCOVERY=false electron-builder --publish=never --config.win.signAndEditExecutable=false",
+    "package": "cross-env CSC_IDENTITY_AUTO_DISCOVERY=false electron-builder build --dir --publish=never --config.win.signAndEditExecutable=false",
+    "prepackage": "node ../../scripts/ensure-app-builder.js && node prepare-dist.js",
+    "start:debug": "cross-env ELECTRON_ENABLE_LOGGING=true electron ."
+  },
+  "build": {
+    "appId": "com.servora.pos",
+    "productName": "Servora",
+    "electronVersion": "35.0.0",
+    "files": [
+      "dist/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "output": "build-output"
+    },
+    "asar": {
+      "smartUnpack": false
+    },
+    "win": {
+      "sign": false,
+      "target": "dir",
+      "signAndEditExecutable": false
+    },
+    "mac": {
+      "identity": null
+    },
+    "extraResources": [
+      {
+        "from": "../backend/dist-prod",
+        "to": "backend"
+      },
+      {
+        "from": "../frontend/dist",
+        "to": "frontend"
+      },
+      {
+        "from": "../backend/dist-prod/report/reports",
+        "to": "backend/dist/report/reports"
+      }
+    ]
+  },
+  "devDependencies": {
+    "app-builder-bin": "5.0.0-alpha.10",
+    "electron": "35.0.0",
+    "electron-builder": "25.1.8"
+  },
+  "dependencies": {
+    "cross-spawn": "^7.0.3"
+  }
+}

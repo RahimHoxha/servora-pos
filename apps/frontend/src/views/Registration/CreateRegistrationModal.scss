@@ -1,0 +1,68 @@
+.create-registration-modal {
+  .product-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @media (max-width: 425px) {
+      flex-direction: column;
+      align-items: flex-start !important;
+      gap: 12px;
+    }
+    .ant-form-item,
+    .ant-input-number {
+      width: 100%;
+    }
+  }
+
+  .product-info {
+    @media (max-width: 350px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      width: 100%;
+    }
+  }
+
+  .input-row {
+    flex-direction: row;
+    gap: 16px;
+    flex: 1 1 0;
+    min-width: 0;
+    .ant-form-item,
+    .ant-input-number {
+      width: 100%;
+      flex: 1 1 0;
+    }
+    @media (max-width: 635px) {
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 8px;
+      .ant-form-item,
+      .ant-input-number {
+        width: 100%;
+        flex: unset;
+      }
+    }
+    @media (min-width: 1024px) {
+      .ant-form-item,
+      .ant-input-number {
+        max-width: 220px;
+        width: 100%;
+        flex: unset;
+      }
+    }
+  }
+
+  .ant-form-item {
+    @media (max-width: 350px) {
+      width: 100%;
+      margin-bottom: 12px;
+    }
+  }
+
+  .ant-input-number {
+    @media (max-width: 350px) {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+@import "../../styles/page-shell.scss";
+
+.user-expenses-layout {
+  @include servora-page;
+
+  .header-section {
+    margin-bottom: 8px;
+
+    @media (max-width: 767px) {
+      margin-bottom: 4px;
+    }
+  }
+
+  .title {
+    @include servora-page-title;
+  }
+
+  .section-divider {
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: 767px) {
+      margin: 12px 0;
+    }
+  }
+
+  .expenses-list {
+    @include servora-panel;
+    padding: 8px 20px;
+
+    @media (max-width: 767px) {
+      padding: 8px 12px;
+    }
+
+    @media (max-width: 400px) {
+      padding: 8px;
+    }
+  }
+
+  .expense-item {
+    padding: 16px 0;
+
+    @media (max-width: 767px) {
+      padding: 12px 0;
+    }
+
+    .ant-list-item-meta-content {
+      min-width: 0;
+    }
+
+    .ant-list-item-meta-title {
+      white-space: normal;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .expense-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #0f172a;
+
+    @media (max-width: 767px) {
+      font-size: 1.1rem;
+    }
+  }
+
+  .expense-description {
+    font-size: 0.95rem;
+    color: #64748b;
+
+    @media (max-width: 767px) {
+      font-size: 0.9rem;
+    }
+  }
+
+  .expense-actions {
+    @media (max-width: 767px) {
+      margin-top: 8px;
+      flex-wrap: wrap;
+    }
+
+    .ant-col {
+      min-width: 0;
+    }
+  }
+
+  .expense-amount {
+    margin: 0 !important;
+    white-space: normal;
+    word-break: break-word;
+    color: #0f766e;
+    font-weight: 700;
+  }
+
+  .scrollable-table {
+    overflow-y: auto;
+  }
+
+  .ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

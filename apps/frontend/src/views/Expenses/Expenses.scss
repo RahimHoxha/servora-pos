@@ -1,0 +1,60 @@
+@import "../../styles/page-shell.scss";
+
+.expenses-layout {
+  @include servora-page;
+  min-height: auto;
+  height: auto;
+  max-width: 100%;
+  overflow-x: hidden;
+
+  .title {
+    @include servora-page-title;
+  }
+
+  .expenses-header {
+    margin-bottom: 8px;
+
+    @media (max-width: 767px) {
+      margin-bottom: 4px;
+    }
+  }
+
+  .filters-container {
+    width: 100%;
+  }
+
+  .total-container {
+    margin: 4px 0 8px;
+    display: flex;
+    justify-content: flex-end;
+
+    @media (max-width: 767px) {
+      justify-content: stretch;
+    }
+  }
+
+  .summary-stat {
+    @include servora-summary;
+
+    @media (max-width: 767px) {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  .summary-stat__label {
+    @include servora-summary-label;
+  }
+
+  .summary-stat__value {
+    @include servora-summary-value;
+  }
+
+  .scrollable-table {
+    @include servora-table-panel;
+
+    @media (max-width: 767px) {
+      overflow-x: auto;
+    }
+  }
+}

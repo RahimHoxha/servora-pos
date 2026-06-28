@@ -1,0 +1,134 @@
+.select-product-modal {
+  max-width: calc(100vw - 16px);
+}
+
+.select-product-modal .ant-modal-content {
+  border-radius: 16px;
+}
+
+.select-product-modal__categories {
+  display: flex;
+  gap: 8px;
+  margin: 16px 0;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: thin;
+}
+
+.select-product-modal__category {
+  flex: 0 0 auto;
+  border: none;
+  border-radius: 999px;
+  background: #e2e8f0;
+  color: #0f172a;
+  height: auto;
+  padding: 10px 16px;
+  white-space: nowrap;
+}
+
+.select-product-modal__category--active {
+  background: #0f766e;
+  color: #fff;
+  font-weight: 600;
+}
+
+.select-product-modal__grid {
+  margin-top: 4px;
+}
+
+.select-product-modal__card {
+  border-radius: 16px;
+  position: relative;
+  height: 100%;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.select-product-modal__card--selected {
+  box-shadow: 0 0 0 2px #0f766e;
+}
+
+.select-product-modal__card--disabled {
+  opacity: 0.55;
+  background: #f0f0f0;
+}
+
+.select-product-modal__card-body {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.select-product-modal__image {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #fff;
+  box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.08);
+}
+
+.select-product-modal__name {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.select-product-modal__price {
+  display: block;
+  margin-top: 4px;
+  font-size: 16px;
+}
+
+.select-product-modal__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+  font-weight: 600;
+  font-size: 13px;
+  text-align: center;
+}
+
+.select-product-modal__overlay--stock {
+  background: rgba(220, 38, 38, 0.85);
+}
+
+.select-product-modal__overlay-sub {
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .select-product-modal__image {
+    width: 96px;
+    height: 96px;
+  }
+
+  .select-product-modal__name {
+    font-size: 15px;
+  }
+
+  .select-product-modal__price {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 575px) {
+  .select-product-modal .ant-modal {
+    max-width: 100%;
+    margin: 8px auto;
+    padding: 0;
+  }
+
+  .select-product-modal .ant-modal-content {
+    border-radius: 12px;
+  }
+}

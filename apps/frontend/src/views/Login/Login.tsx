@@ -231,7 +231,6 @@ export const Login: React.FC = () => {
         </div>
 
         <div className="login-page__footer">
-          <Typography.Text type="secondary">{t("Common.contactInfo")}</Typography.Text>
           <Typography.Text type="secondary">
             {t("Common.poweredBy", { brand: PLATFORM.name })}
           </Typography.Text>

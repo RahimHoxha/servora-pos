@@ -1,6 +1,5 @@
 {
   "Common": {
-    "contactInfo": "Контакт: info@servora.app",
     "poweredBy": "Овозможено од {{brand}}",
     "Navigation": {
       "main": "Главна навигација",
